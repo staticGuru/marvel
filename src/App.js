@@ -1,17 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-import { BrowserRouter, Route } from 'react-router-dom';
-import Home from './screens/home';
-import SavedCharacters from './screens/savedCharacters';
+import logo from "./logo.svg";
+import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./screens/home";
+import SavedCharacters from "./screens/savedCharacters";
 
 function App() {
   return (
     <BrowserRouter>
-    <div className="App">
-    <Route exact path="/" component={Home} />
-    <Route path="/character/:id" component={SavedCharacters} />
-    </div>
-  </BrowserRouter>
+      <Route exact path="/">
+        <Home />
+      </Route>
+      <Route exact path="/savedCharacters">
+        <SavedCharacters />
+      </Route>
+    </BrowserRouter>
   );
 }
 
