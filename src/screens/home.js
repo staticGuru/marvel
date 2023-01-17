@@ -30,6 +30,7 @@ function Home(props) {
             name={charecter.name}
             img={charecter.thumbnail}
             description={charecter.description}
+            charecter={charecter}
           />
         ))}
       </div>

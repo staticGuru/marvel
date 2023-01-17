@@ -4,8 +4,9 @@ import Modal from '../Modal'
 import './DataCard.css'
 
 
-const DataCard = ({ id, name, img, description, baseLink }) =>{ 
+const DataCard = ({ id, name, img, description, baseLink,charecter}) =>{ 
   const [isOpen,setIsOpen]=React.useState(false)
+  // setIsOpen(!isOpen)
   return(
   <div className='col-lg-2 col-md-3 col-sm-4 col-xs-6 card-wrapper'>
     <div className='card-inner' onClick={()=>setIsOpen(!isOpen)}>
@@ -21,7 +22,7 @@ const DataCard = ({ id, name, img, description, baseLink }) =>{
         }
       </div>*/}
     </div>
-    <Modal isOpen={isOpen} setIsOpen={setIsOpen}/>
+    <Modal isOpen={isOpen} setIsOpen={setIsOpen} charecter={charecter}/>
   </div>
 )}
 
