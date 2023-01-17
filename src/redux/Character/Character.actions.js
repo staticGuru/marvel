@@ -1,4 +1,4 @@
-import { CHARECTERLIST, OFFSET, SAVEDCHARECTERLIST, SEARCHCHARECTER } from "./Character.type";
+import { ADDCHARECTER, ADDORREMOVECHARECTER, CHARECTERLIST, OFFSET, REMOVECHARECTER, SAVEDCHARECTERLIST, SEARCHCHARECTER } from "./Character.type";
 
 export const getCharectersList = (payload) => {
   return {
@@ -22,6 +22,12 @@ export const setOffset=(payload) => {
 export const getSavedCharectersList=(payload) => {
   return {
     type:SAVEDCHARECTERLIST,
+    payload
+  }
+}
+export const saveOrRemoveCharecter=(payload) => {
+  return {
+    type:ADDORREMOVECHARECTER,
     payload
   }
 }

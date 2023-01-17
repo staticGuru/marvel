@@ -22,7 +22,7 @@ function Home(props) {
         <Search />
         <div><Link to="/savedCharacters">View Saved</Link></div>
       </div>
-      <div className="d-flex flex-column flex-1 grid grid-cols-4 gap-7">
+      <div className="d-flex flex-column flex-1 grid grid-cols-3 gap-7">
         {props.charecterList.map((charecter, index) => (
           <DataCard
             index={index}

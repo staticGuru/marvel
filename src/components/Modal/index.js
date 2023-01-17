@@ -7,12 +7,13 @@ const Modal = ({ isOpen, setIsOpen, charecter }) => {
       id="myModal"
       className="modal"
       style={{ display: isOpen ? "block" : "none" }}
-      onClick={() => setIsOpen(!isOpen)}
+      onClick={() => {}}
     >
       <div className="modal-content">
         <span className="close" onClick={() => setIsOpen(!isOpen)}>
           &times;
-        </span>
+  </span>
+        
         <div className="charecter-details">
           <DataDetails
             id={charecter.id}
