@@ -1,9 +1,9 @@
 import { combineReducers } from "redux";
 
-import tollReducer from "./Toll/toll.reducers";
+import characterReducer from "./Character/Character.reducers";
 
 const rootReducer = combineReducers({
-  toll: tollReducer,
+  marvel: characterReducer,
 });
 
 export default rootReducer;
