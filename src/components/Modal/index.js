@@ -10,7 +10,7 @@ const Modal = ({ isOpen, setIsOpen, charecter }) => {
       onClick={() => setIsOpen(!isOpen)}
     >
       <div className="modal-content" onClick={(e)=>e.stopPropagation()}>
-        <span className="close" onClick={() => setIsOpen(!isOpen)}>
+        <span className="close px-5 py-3 bg-slate-700 text-center rounded-lg cursor-pointer text-lg" onClick={() => setIsOpen(!isOpen)}>
           &times;
   </span>
         <div className="charecter-details">
@@ -21,6 +21,7 @@ const Modal = ({ isOpen, setIsOpen, charecter }) => {
             img={charecter.thumbnail}
             description={charecter.description}
             charecter={charecter}
+            setIsOpen={setIsOpen}
           />
           </Suspense>
         </div>

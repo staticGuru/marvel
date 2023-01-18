@@ -5,11 +5,11 @@ function DataLinks({ items }) {
     <div className="dataLinks">
       {items?.map((itemsData, index) => {
         return (
-          <div className="links">
-            <a key={index} href={itemsData?.resourceURI} target="_blank">
+          <h3 className="links card-description">
+            <a key={index} href={itemsData?.resourceURI} className="italic" target="_blank">
               {itemsData?.name}
             </a>
-          </div>
+          </h3>
         );
       })}
     </div>

@@ -5,8 +5,9 @@ import { getSavedCharectersList } from "../redux/Character/Character.actions";
 
 function SavedCharacters(props) {
   return (
-    <div className="container mx-auto rounded-xl shadow border p-8 m-10">
-    <div className="d-flex flex-column flex-1 grid grid-cols-3 gap-7">
+    <div className="container mx-auto rounded-xl p-8 m-10">
+    <h1 className="text-center Title">Saved Characters</h1>
+    {props.savedCharecterList?.length>0?<div className="d-flex flex-column flex-1 grid grid-cols-3 gap-7">
       {props.savedCharecterList.map((charecter, index) => (
         <DataCard
           index={index}
@@ -17,7 +18,7 @@ function SavedCharacters(props) {
           charecter={charecter}
         />
       ))}
-      </div>
+      </div>:<h2 className="text-center">No Saved Characters found!!!</h2>}
     </div>
   );
 }

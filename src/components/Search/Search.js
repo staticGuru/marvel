@@ -8,7 +8,7 @@ function Search(props) {
      },[props.searchLetter])
   return (
     <form className="SearchBar">
-    <input value={props.searchLetter} placeholder="Search charecter..." onChange={(e)=>props.setSearchLetter(e.target.value)}/>
+    <input value={props.searchLetter} placeholder="Search over 8,000 characters" onChange={(e)=>props.setSearchLetter(e.target.value)}/>
     </form>
   )
 }

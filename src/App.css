@@ -9,11 +9,6 @@ body {
   color: #E0E0E0;
   box-sizing: border-box;
   margin: 20px;
-  /*
-  background: #DC2424; 
-  background: -webkit-linear-gradient(to left,  #DC2424, #4A569D); 
-  background: linear-gradient(to left,  #DC2424, #4A569D); 
-  */
   background: #DC2424; 
   background: -webkit-linear-gradient(to left,  #bc4040, #5c6dd6); 
   background: linear-gradient(to left,  #bc4040, #5c6dd6); 
@@ -24,6 +19,7 @@ body {
   color: orange;
 }
 h1,
+h3,
 h2 {
   font-family: 'Permanent Marker', sans-serif;
 }
@@ -106,29 +102,32 @@ h2 {
 
 /* Modal Content/Box */
 .modal-content {
-  /* background-color: #fefefe;
-  margin: 2% auto; /* 15% from the top and centered */
-  /* padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  height: 80%;  */
   position: absolute;
   top: 50%;
-  background-color: #fefefe;
   left: 50%;
   z-index: 100;
   transform: translate(-50%, -50%);
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
+  border-radius: 2rem;
   height: 80%;
+  font-family: sans-serif;
+  font-size: 95%;
+  color: #E0E0E0;
+  box-sizing: border-box;
+  margin: 20px;
+  overflow:scroll;
+  background: #DC2424; 
+  background: -webkit-linear-gradient(to right,  #bc4040, #5c6dd6); 
+  background: linear-gradient(to right,  #bc4040, #5c6dd6); 
+  
 }
 .charecter-details{
   height: -webkit-fill-available;
   display: flex;
   flex: 1;
-  background-color: #fefefe;
-  overflow:scroll;
+  background-color: "transparent";
   width:  -webkit-fill-available;
   
 }
@@ -137,6 +136,7 @@ h2 {
   color: #aaa;
   float: right;
   font-size: 28px;
+  margin-top: 1rem;
   font-weight: bold;
 }
 
@@ -160,7 +160,7 @@ h2 {
   padding: 10px 15px;
   border-radius: 4px 0 0 4px;
   box-shadow: 4px 4px 4px black;
-  width: 330px;
+  width: 400px;
   background: rgba(33,33,32,1);
   color: white;
 }
