@@ -1,9 +1,7 @@
 import {
-  ADDCHARECTER,
   ADDORREMOVECHARECTER,
   CHARECTERLIST,
   OFFSET,
-  REMOVECHARECTER,
   SEARCHCHARECTER,
 } from "./Character.type";
 
@@ -29,25 +27,27 @@ const reducer = (state = INITIAL_STATE, action) => {
       };
     case ADDORREMOVECHARECTER:
       //write the the append actions here
-      if(state.saved_charecter_list?.some(char=>action.payload.id ===char.id)){
+      if (
+        state.saved_charecter_list?.some(
+          (char) => action.payload.id === char.id
+        )
+      ) {
         return {
           ...state,
-          saved_charecter_list: state?.saved_charecter_list?.filter(charecter=>charecter?.id !==action.payload?.id)
+          saved_charecter_list: state?.saved_charecter_list?.filter(
+            (charecter) => charecter?.id !== action.payload?.id
+          ),
         };
-      }else{
+      } else {
         return {
           ...state,
-          saved_charecter_list: [action.payload,...state?.saved_charecter_list],
+          saved_charecter_list: [
+            action.payload,
+            ...state?.saved_charecter_list,
+          ],
         };
       }
-     
-    case REMOVECHARECTER:
-      //write the the remove actions here
 
-      return {
-        ...state,
-        searchVehicle: action.payload,
-      };
     case CHARECTERLIST:
       return {
         ...state,

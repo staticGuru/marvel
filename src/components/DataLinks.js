@@ -6,7 +6,13 @@ function DataLinks({ items }) {
       {items?.map((itemsData, index) => {
         return (
           <h3 className="links card-description">
-            <a key={index} href={itemsData?.resourceURI} className="italic" target="_blank">
+            <a
+              key={index}
+              href={itemsData?.resourceURI}
+              className="italic"
+              target="_blank"
+              rel="noreferrer"
+            >
               {itemsData?.name}
             </a>
           </h3>
