@@ -30,7 +30,7 @@ function Home(props) {
         <div className="flex justify-center">
           <Search />
 
-          <h2 className="px-5 py-3 bg-slate-700 text-center rounded-lg mx-5 cursor-pointer text-lg">
+          <h2 className="px-5 py-3 bg-slate-700 text-center rounded-lg mx-5 cursor-pointer text-lg savedButton border">
             <Link to="/savedCharacters">View Saved</Link>
           </h2>
         </div>
