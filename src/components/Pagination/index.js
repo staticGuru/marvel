@@ -7,10 +7,10 @@ function Pagination(props) {
     <div className="flex flex-row align-center justify-center">
       <h2
         className={`px-5 py-3 bg-slate-700 text-center rounded-lg mx-5 cursor-pointer text-lg ${
-          props.offset == 0 ? "opacity-50" : "opacity-100"
+          props.offset === 0 ? "opacity-50" : "opacity-100"
         }`}
         onClick={() =>
-          props.offset == 0 ? null : props.setOffset(props.offset - 3)
+          props.offset === 0 ? null : props.setOffset(props.offset - 3)
         }
       >
         Prev

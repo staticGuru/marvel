@@ -1,9 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Modal from "../Modal";
 import "./DataCard.css";
 
-const DataCard = ({ id, name, img, description, baseLink, charecter }) => {
+const DataCard = ({ name, img, charecter }) => {
   const [isOpen, setIsOpen] = React.useState(false);
   return (
     <div className="col-lg-2 col-md-3 col-sm-4 col-xs-6 card-wrapper">
@@ -26,17 +25,8 @@ const DataCard = ({ id, name, img, description, baseLink, charecter }) => {
             </div>
           </div>
         </div>
-        {/*<div className='card-img' style={{ backgroundImage: `url(${img.path}.${img.extension})` }} />
-      <div className='card-title'>{name}</div>
-    
-      <div className='card-description'>
-        {description ?
-          description
-          :
-          'No description provided'
-        }
-      </div>*/}
       </div>
+      {/**Add the modal popup sections */}
       <Modal isOpen={isOpen} setIsOpen={setIsOpen} charecter={charecter} />
     </div>
   );

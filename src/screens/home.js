@@ -34,23 +34,30 @@ function Home(props) {
             <Link to="/savedCharacters">View Saved</Link>
           </h2>
         </div>
-        {props.charecterList?.length>0?<div className="grid grid-cols-3 gap-7 m-5">
-          {props.charecterList.map((charecter, index) => (
-            <DataCard
-              index={index}
-              id={charecter.id}
-              name={charecter.name}
-              img={charecter.thumbnail}
-              description={charecter.description}
-              charecter={charecter}
-            />
-          ))}
-        </div>:<h2 className="text-center m-5">No Characters found!!!</h2>}
-        {props.charecterList?.length>=3 && <Pagination />}
+        {/**Render the character */}
+        {props.charecterList?.length > 0 ? (
+          <div className="grid grid-cols-3 gap-7 m-5">
+            {props.charecterList.map((charecter, index) => (
+              <DataCard
+                index={index}
+                id={charecter.id}
+                name={charecter.name}
+                img={charecter.thumbnail}
+                description={charecter.description}
+                charecter={charecter}
+              />
+            ))}
+          </div>
+        ) : (
+          <h2 className="text-center m-5">No Characters found!!!</h2>
+        )}
+        {/**Render the Pagination sections */}
+        {props.charecterList?.length >= 3 && <Pagination />}
       </div>
     </div>
   );
 }
+// Manipulate the state value from redux store
 const mapStateToProps = (state) => {
   return {
     charecterList: state.marvel.charecter_list,
@@ -58,9 +65,11 @@ const mapStateToProps = (state) => {
     offset: state.marvel.offset,
   };
 };
+// Manipulate the actions in the redux store
 const mapDispatchToProps = (dispatch) => {
   return {
     getCharectersList: (e) => dispatch(getCharectersList(e)),
   };
 };
+// connect the redux store in the component
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

@@ -4,6 +4,7 @@ import { setOffset, setSearchLetter } from '../../redux/Character/Character.acti
 
 function Search(props) {
      React.useEffect(()=>{
+      // Reset the offset value in search the character values
           props.setOffset(0);
      },[props.searchLetter])
   return (

@@ -13,6 +13,7 @@ function DataDetails({
   setIsOpen,
 }) {
   function saveCharecters(e) {
+    //Prevent the event pubbling activities
     e.stopPropagation();
     saveOrRemoveCharecter(charecter);
     setIsOpen(false);
@@ -57,10 +58,7 @@ function DataDetails({
 }
 const mapStateToProps = (state) => {
   return {
-    charecterList: state.marvel.charecter_list,
     savedCharecterList: state.marvel.saved_charecter_list,
-    searchLetter: state.marvel.search_charecter,
-    offset: state.marvel.offset,
   };
 };
 const mapDispatchToProps = (dispatch) => {

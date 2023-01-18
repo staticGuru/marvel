@@ -22,16 +22,19 @@ function SavedCharacters(props) {
     </div>
   );
 }
+// Manipulate the state value from redux store
 
 const mapStateToProps = (state) => {
   return {
     savedCharecterList: state.marvel.saved_charecter_list,
   };
 };
+// Manipulate the actions in the redux store
 const mapDispatchToProps = (dispatch) => {
   return {
     getSavedCharectersList: (e) => dispatch(getSavedCharectersList(e)),
   };
 };
 
+// connect the redux store in the component
 export default connect(mapStateToProps, mapDispatchToProps)(SavedCharacters);
