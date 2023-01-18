@@ -33,6 +33,10 @@ function DataDetails({ id, name, img, description, baseLink,charecter,saveOrRemo
       <h2 className='subTitle'>Series:</h2>
      <DataLinks items={charecter?.series?.items}/>
       </div>
+      <div>
+      <h2 className='subTitle'>Stories:</h2>
+     <DataLinks items={charecter?.stories?.items}/>
+      </div>
     </div>
   </div>
   )

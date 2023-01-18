@@ -5,7 +5,6 @@ import store from "./redux/store";
 import React, { Suspense } from "react";
 const SavedCharacters = React.lazy(() => import('./screens/savedCharacters'));
 const Home = React.lazy(() => import('./screens/home'));
-
 function App() {
   return (
     <Provider store={store}>

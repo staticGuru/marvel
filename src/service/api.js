@@ -3,7 +3,7 @@ import axios from "axios";
 export async function getCharecterList(search = "", offset = 0) {
   try {
     const fetchedData = await axios.get(
-      `https://gateway.marvel.com/v1/public/characters?ts=1632998235&apikey=ff7d1b4aefa575448f941959adefe76d&hash=bc74402412971310d7a50ccd0dff3c7b${
+      `${process.env.REACT_APP_MARVEL_API}/characters?ts=${process.env.REACT_APP_HASH_KEY}&apikey=${process.env.REACT_APP_API_KEY}&hash=${process.env.REACT_APP_PUBLIC_KEY}${
         !!search ? `&nameStartsWith=${search}` : ""
       }&limit=3&offset=${offset}`
     );
