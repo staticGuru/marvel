@@ -1,4 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
 .App {
+  text-align: center;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 95%;
+  color: #E0E0E0;
+  box-sizing: border-box;
+  margin: 20px;
+  /*
+  background: #DC2424; 
+  background: -webkit-linear-gradient(to left,  #DC2424, #4A569D); 
+  background: linear-gradient(to left,  #DC2424, #4A569D); 
+  */
+  background: #DC2424; 
+  background: -webkit-linear-gradient(to left,  #bc4040, #5c6dd6); 
+  background: linear-gradient(to left,  #bc4040, #5c6dd6); 
+  
+}
+
+::selection {
+  color: orange;
+}
+h1,
+h2 {
+  font-family: 'Permanent Marker', sans-serif;
+}
+.Title {
+  color: white;
+  font-size: 3rem;
+  margin: 20px 0;
+  text-shadow: 4px 4px 4px black;
   text-align: center;
 }
 .links a{
@@ -113,6 +146,30 @@
   text-decoration: none;
   cursor: pointer;
 }
+
+.SearchBar {
+  margin: 0 auto;
+  text-align: center;
+  width: 500px;
+
+}
+
+.SearchBar input {
+  font-size: 24px;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px 0 0 4px;
+  box-shadow: 4px 4px 4px black;
+  width: 330px;
+  background: rgba(33,33,32,1);
+  color: white;
+}
+
+.SearchBar input:focus {
+  background: #263238;
+  outline: none;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

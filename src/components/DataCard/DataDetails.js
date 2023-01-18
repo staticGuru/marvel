@@ -1,17 +1,18 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { saveOrRemoveCharecter } from '../../redux/Character/Character.actions';
+import isItemSaved from '../../service/itemSaved';
 import DataLinks from '../DataLinks'
 
-function DataDetails({ id, name, img, description, baseLink,charecter,saveOrRemoveCharecter }) {
+function DataDetails({ id, name, img, description, baseLink,charecter,saveOrRemoveCharecter,savedCharecterList }) {
   function saveCharecters(e){
-    e.preventDefault();
+    e.stopPropagation();
     saveOrRemoveCharecter(charecter)
   }
   return (
     <div className='col-lg-2 col-md-3 col-sm-4 col-xs-6 card-wrapper' style={{width: "-webkit-fill-available"}}>
     <div className='card-inner'>
-    <div onClick={(e)=>saveCharecters(e)}><h3>Save</h3></div>
+    <div onClick={(e)=>saveCharecters(e)}><h3>{!isItemSaved(charecter,savedCharecterList)?"Save":"Remove"}</h3></div>
     <div className='card-title-details'>{name}</div>
       <div className='card-img-details' style={{ backgroundImage: `url(${img.path}.${img.extension})` }} />
     <h2 className='subTitle'>Description:</h2>
@@ -38,6 +39,7 @@ function DataDetails({ id, name, img, description, baseLink,charecter,saveOrRemo
 const mapStateToProps = (state) => {
   return {
     charecterList: state.marvel.charecter_list,
+    savedCharecterList: state.marvel.saved_charecter_list,
     searchLetter: state.marvel.search_charecter,
     offset: state.marvel.offset,
   };

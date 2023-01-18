@@ -17,12 +17,15 @@ function Home(props) {
     fetchData();
   }, [props.searchLetter,props.offset]);
   return (
-    <div className="container mx-auto rounded-xl shadow border p-8 m-10">
-      <div>
+    <div style={{display: 'flex',alignItems: 'center',justifyContent: 'center',height:'100vh'}}>
+    <div className="container mx-auto rounded-xl p-8 m-10 d-flex flex-1 flex-row">
+    <h2 className="text-center Title">Marvel Characters</h2>
+      <div className="flex justify-center">
         <Search />
-        <div><Link to="/savedCharacters">View Saved</Link></div>
+      
+      <h2 className="px-5 py-3 bg-slate-700 text-center rounded-lg mx-5 cursor-pointer text-lg"><Link to="/savedCharacters">View Saved</Link></h2>
       </div>
-      <div className="d-flex flex-column flex-1 grid grid-cols-3 gap-7">
+      <div className="grid grid-cols-3 gap-7 m-5">
         {props.charecterList.map((charecter, index) => (
           <DataCard
             index={index}
@@ -35,6 +38,7 @@ function Home(props) {
         ))}
       </div>
       <Pagination/>
+    </div>
     </div>
   );
 }

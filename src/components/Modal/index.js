@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import DataDetails from "../DataCard/DataDetails";
+import React, { Suspense } from "react";
+const DataDetails = React.lazy(() => import('../DataCard/DataDetails'));
 
 const Modal = ({ isOpen, setIsOpen, charecter }) => {
   return (
@@ -7,14 +7,14 @@ const Modal = ({ isOpen, setIsOpen, charecter }) => {
       id="myModal"
       className="modal"
       style={{ display: isOpen ? "block" : "none" }}
-      onClick={() => {}}
+      onClick={() => setIsOpen(!isOpen)}
     >
-      <div className="modal-content">
+      <div className="modal-content" onClick={(e)=>e.stopPropagation()}>
         <span className="close" onClick={() => setIsOpen(!isOpen)}>
           &times;
   </span>
-        
         <div className="charecter-details">
+        <Suspense fallback={<div>Loading...</div>}>
           <DataDetails
             id={charecter.id}
             name={charecter.name}
@@ -22,6 +22,7 @@ const Modal = ({ isOpen, setIsOpen, charecter }) => {
             description={charecter.description}
             charecter={charecter}
           />
+          </Suspense>
         </div>
       </div>
     </div>

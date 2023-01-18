@@ -7,9 +7,9 @@ function Search(props) {
           props.setOffset(0);
      },[props.searchLetter])
   return (
-    <div>
+    <form className="SearchBar">
     <input value={props.searchLetter} placeholder="Search charecter..." onChange={(e)=>props.setSearchLetter(e.target.value)}/>
-    </div>
+    </form>
   )
 }
 const mapStateToProps = (state) => {

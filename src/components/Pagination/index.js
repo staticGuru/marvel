@@ -4,9 +4,9 @@ import { setOffset } from "../../redux/Character/Character.actions";
 
 function Pagination(props) {
   return (
-    <div className="">
-      <div onClick={() => props.setOffset(props.offset - 3)}>Prev</div>
-      <div onClick={() => props.setOffset(props.offset + 3)}>Next</div>
+    <div className="flex flex-row align-center justify-center">
+      <h2 className="px-5 py-3 bg-slate-700 text-center rounded-lg mx-5 cursor-pointer text-lg" onClick={() => props.setOffset(props.offset - 3)}>Prev</h2>
+      <h2 className="px-5 py-3 bg-slate-700 text-center rounded-lg mx-5 cursor-pointer text-lg" onClick={() => props.setOffset(props.offset + 3)}>Next</h2>
     </div>
   );
 }
