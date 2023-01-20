@@ -6,10 +6,10 @@ function DataLinks({ items }) {
     {/**Generate the links in the item details */}
       {items?.map((itemsData, index) => {
         return (
-          <h3 className="links card-description">
+          <h3 key={index} className="links card-description">
             <a
               key={index}
-              href={itemsData?.resourceURI}
+              href={`${itemsData?.resourceURI}?ts=${process.env.REACT_APP_HASH_KEY}&apikey=${process.env.REACT_APP_API_KEY}&hash=${process.env.REACT_APP_PUBLIC_KEY}`}
               className="italic"
               target="_blank"
               rel="noreferrer"

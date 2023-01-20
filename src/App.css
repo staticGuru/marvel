@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+@import url("https://fonts.googleapis.com/css?family=Permanent+Marker");
 .App {
   text-align: center;
 }
@@ -6,15 +6,14 @@
 body {
   font-family: sans-serif;
   font-size: 95%;
-  color: #E0E0E0;
+  color: #e0e0e0;
   box-sizing: border-box;
   margin: 20px;
-  background: #DC2424;
+  background: #dc2424;
   background-size: 400% 400%;
   animation: gradientData 5s ease infinite;
-  background: -webkit-linear-gradient(to left,  #bc4040, #5c6dd6); 
-  background: linear-gradient(to left,  #bc4040, #5c6dd6);
-  
+  background: -webkit-linear-gradient(to left, #bc4040, #5c6dd6);
+  background: linear-gradient(to left, #bc4040, #5c6dd6);
 }
 
 ::selection {
@@ -23,7 +22,7 @@ body {
 h1,
 h3,
 h2 {
-  font-family: 'Permanent Marker', sans-serif;
+  font-family: "Permanent Marker", sans-serif;
 }
 .Title {
   color: white;
@@ -32,7 +31,7 @@ h2 {
   text-shadow: 4px 4px 4px black;
   text-align: center;
 }
-.links a{
+.links a {
   outline: none;
   text-decoration: none;
   padding: 2px 1px 0;
@@ -60,7 +59,7 @@ h2 {
   background: #265301;
   color: #cdfeaa;
 }
-.links{
+.links {
   margin-bottom: 0.5rem;
 }
 .App-logo {
@@ -68,7 +67,7 @@ h2 {
   pointer-events: none;
 }
 
-.savedButton{
+.savedButton {
   background: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 }
 
@@ -96,8 +95,8 @@ h2 {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
 /* Modal Content/Box */
@@ -114,21 +113,20 @@ h2 {
   height: 80%;
   font-family: sans-serif;
   font-size: 95%;
-  color: #E0E0E0;
+  color: #e0e0e0;
   box-sizing: border-box;
   margin: 20px;
-  overflow:scroll;
-  background: #DC2424; 
-  background: -webkit-linear-gradient(to right,  #bc4040, #5c6dd6); 
-  background: linear-gradient(to right,  #bc4040, #5c6dd6);
+  overflow: scroll;
+  background: #dc2424;
+  background: -webkit-linear-gradient(to right, #bc4040, #5c6dd6);
+  background: linear-gradient(to right, #bc4040, #5c6dd6);
 }
-.charecter-details{
+.charecter-details {
   height: -webkit-fill-available;
   display: flex;
   flex: 1;
   background-color: "transparent";
-  width:  -webkit-fill-available;
-  
+  width: -webkit-fill-available;
 }
 /* The Close Button */
 .close {
@@ -150,7 +148,6 @@ h2 {
   margin: 0 auto;
   text-align: center;
   width: 500px;
-
 }
 
 .SearchBar input {
@@ -160,7 +157,7 @@ h2 {
   border-radius: 4px 0 0 4px;
   box-shadow: 4px 4px 4px black;
   width: 400px;
-  background: rgba(33,33,32,1);
+  background: rgba(33, 33, 32, 1);
   color: white;
 }
 
@@ -169,15 +166,107 @@ h2 {
   outline: none;
 }
 
+.card-inner {
+  margin-top: 15px;
+  padding: 0px;
+  height: 330px;
+}
+.card-img-details {
+  height: 290px;
+  background-position: center;
+  background-size: stretch;
+  background-repeat: no-repeat;
+  transition: border 200ms ease-out;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.subTitle {
+  font-weight: bold;
+  font-size: medium;
+  margin-bottom: 1rem;
+  color: white;
+}
+.dataLinks {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+.card-title {
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  color: rgba(237, 26, 59, 1);
+  padding: 0 10px;
+  margin-bottom: auto;
+}
+.card-description {
+  font-size: 20px;
+  font-weight: 500;
+  color: rgb(54, 52, 52);
+  padding: 5px 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* max-height: 45px; */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.card-title-details {
+  margin-top: 10px;
+  font-size: 27px;
+  font-weight: bold;
+  color: white;
+  padding: 0 10px;
+  margin-bottom: 5px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.Card {
+  margin: 20px;
+  height: 400px;
+  min-width: 300px;
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 30px #00212d;
+  filter: brightness(1) saturate(90%);
+  transition: transform 0.6s, box-shadow 0.6s, filter 0.4s;
+}
+
+.Card:hover {
+  box-shadow: 1px 1px 40px #f9b916;
+  transform: scale(1.02);
+  filter: brightness(1.2) saturate(110%);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.Card__gradient-overlay {
+  height: 100%;
+  background: linear-gradient(
+    rgba(180, 180, 255, 0.1) 35%,
+    rgba(33, 33, 32, 0.8) 64%,
+    rgba(33, 33, 32, 1) 80%
+  );
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Card-Bot {
+  min-height: 0%;
+  padding: 0 15px 15px;
+}
 
 @keyframes gradientData {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

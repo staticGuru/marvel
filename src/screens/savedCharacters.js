@@ -11,6 +11,7 @@ function SavedCharacters(props) {
       {props.savedCharecterList.map((charecter, index) => (
         <DataCard
           index={index}
+          key={charecter.id}
           id={charecter.id}
           name={charecter.name}
           img={charecter.thumbnail}

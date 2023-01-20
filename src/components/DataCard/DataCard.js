@@ -1,6 +1,5 @@
 import React from "react";
 import Modal from "../Modal";
-import "./DataCard.css";
 
 const DataCard = ({ name, img, charecter }) => {
   const [isOpen, setIsOpen] = React.useState(false);

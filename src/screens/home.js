@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import DataCard from "../components/DataCard/DataCard";
@@ -39,6 +39,7 @@ function Home(props) {
           <div className="grid grid-cols-3 gap-7 m-5">
             {props.charecterList.map((charecter, index) => (
               <DataCard
+              key={charecter.id}
                 index={index}
                 id={charecter.id}
                 name={charecter.name}
